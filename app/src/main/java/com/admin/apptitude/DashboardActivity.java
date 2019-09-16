@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.support.v7.widget.CardView;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 
 public class DashboardActivity extends AppCompatActivity {
     CardView cd,cd1,cd2,cd3,cd4,cd5;
@@ -13,6 +15,10 @@ public class DashboardActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE); //will hide the title
+        getSupportActionBar().hide(); // hide the title bar
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN); //enable full screen
         setContentView(R.layout.activity_dashboard);
         init();
         cd.setOnClickListener(new View.OnClickListener() {
@@ -28,7 +34,7 @@ public class DashboardActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Log.v("Cardtwo","Clicked");
-                Intent i = new Intent(DashboardActivity.this,SelectReport.class);
+                Intent i = new Intent(DashboardActivity.this, Report.class);
                 startActivity(i);
             }
         });
@@ -44,6 +50,8 @@ public class DashboardActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Log.v("Cardfour","Clicked");
+                Intent i =new Intent(DashboardActivity.this,SelectAddQuestions.class);
+                startActivity(i);
             }
         });
         cd4.setOnClickListener(new View.OnClickListener() {

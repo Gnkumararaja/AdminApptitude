@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-public class SelectReport extends AppCompatActivity {
+public class Report extends AppCompatActivity {
     Spinner sp1, sp2;
     Button b1;
     RecyclerView recyclerView;
@@ -25,7 +25,7 @@ public class SelectReport extends AppCompatActivity {
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(SelectReport.this, "Api functions", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Report.this, "Api functions", Toast.LENGTH_SHORT).show();
             }
         });
 
