@@ -78,6 +78,7 @@ public class CandidateList extends AppCompatActivity {
 
                 AlertDialog alertDialog1=alertDialog.create();
                 alertDialog1.show();
+                alertDialog1.setCanceledOnTouchOutside(true);
             }
         });
     }

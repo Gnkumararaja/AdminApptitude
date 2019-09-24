@@ -11,15 +11,15 @@ import android.widget.Spinner;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SelectAddQuestions extends AppCompatActivity {
-    Button add;
+public class QuestionList extends AppCompatActivity {
     Spinner sp,sp1,sp2,sp3;
+    Button b;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_select_add_questions);
-        getSupportActionBar().setTitle("Select Questions");
+        getSupportActionBar().setTitle("Questions List");
+        setContentView(R.layout.activity_question_list);
         init();
 
         List<String> type=new ArrayList<String>();
@@ -61,22 +61,23 @@ public class SelectAddQuestions extends AppCompatActivity {
         ArrayAdapter<String> dataAdaapter = new ArrayAdapter<>(this,android.R.layout.simple_spinner_item,set);
         dataAdaapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         sp3.setAdapter(dataaAdapter);
-        add.setOnClickListener(new View.OnClickListener() {
+
+        b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(SelectAddQuestions.this,AddQuestions.class);
+
+                Intent i=new Intent(QuestionList.this,ViewQuestions.class);
                 startActivity(i);
             }
-        });
 
+        });
     }
 
     private void init() {
-        add=findViewById(R.id.add_select);
-        sp=findViewById(R.id.select_q_type);
-        sp1=findViewById(R.id.select_q_category);
-        sp2=findViewById(R.id.select_q_subcategory);
-        sp3=findViewById(R.id.select_q_sets);
-
+        sp=findViewById(R.id.select_ql_type);
+        sp1=findViewById(R.id.select_ql_category);
+        sp2=findViewById(R.id.select_ql_subcategory);
+        sp3=findViewById(R.id.select_ql_sets);
+        b=findViewById(R.id.add_qlselect);
     }
 }

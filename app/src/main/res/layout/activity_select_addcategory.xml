@@ -10,8 +10,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:gravity="center"
         android:layout_gravity="center">
 
@@ -20,11 +20,11 @@
             android:layout_height="wrap_content">
 
             <fr.ganfra.materialspinner.MaterialSpinner
-                android:id="@+id/select_q_type"
+                android:id="@+id/select_a_type"
                 android:textSize="18sp"
-                android:padding="5dp"
                 android:textStyle="bold"
                 android:fontFamily="sans-serif-condensed-light"
+                android:padding="5dp"
                 android:layout_marginBottom="20dp"
                 android:layout_gravity="center"
                 app:ms_multiline="false"
@@ -40,14 +40,14 @@
             android:layout_height="wrap_content">
 
             <fr.ganfra.materialspinner.MaterialSpinner
-                android:id="@+id/select_q_category"
+                android:id="@+id/select_a_category"
                 android:textSize="18sp"
-                android:padding="5dp"
+                android:fontFamily="sans-serif-condensed-light"
                 android:textStyle="bold"
                 android:layout_marginBottom="20dp"
                 android:layout_gravity="center"
                 app:ms_multiline="false"
-                android:fontFamily="sans-serif-condensed-light"
+                android:padding="5dp"
                 app:ms_arrowColor="#0000ff"
                 app:ms_arrowSize="16dp"
                 app:ms_hint="Select Category"
@@ -55,63 +55,55 @@
                 android:layout_height="match_parent"/>
         </LinearLayout>
 
-        <LinearLayout
+      <!--  <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <fr.ganfra.materialspinner.MaterialSpinner
-                android:id="@+id/select_q_subcategory"
-                android:textSize="18sp"
+                android:id="@+id/select_a_subcategory"
+                android:textSize="25dp"
                 android:textStyle="bold"
                 android:layout_marginBottom="20dp"
                 android:layout_gravity="center"
                 app:ms_multiline="false"
                 app:ms_arrowColor="#0000ff"
-                android:fontFamily="sans-serif-condensed-light"
-                android:padding="5dp"
                 app:ms_arrowSize="16dp"
                 app:ms_hint="Select Sub category"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
-        </LinearLayout>
+                android:layout_height="wrap_content"/>
+        </LinearLayout>-->
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <fr.ganfra.materialspinner.MaterialSpinner
-                android:id="@+id/select_q_sets"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:layout_marginBottom="20dp"
-                android:layout_gravity="center"
-                app:ms_multiline="false"
-                app:ms_arrowColor="#0000ff"
-                app:ms_arrowSize="16dp"
-                app:ms_hint="Select Set"
-                android:fontFamily="sans-serif-condensed-light"
-                android:padding="5dp"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
+         <android.support.design.widget.TextInputLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content">
+
+             <android.support.design.widget.TextInputEditText
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:textSize="25dp"
+                 android:layout_gravity="center"
+                 android:textStyle="bold"
+                 android:hint="Add"/>
+         </android.support.design.widget.TextInputLayout>
         </LinearLayout>
 
-      <!--  <LinearLayout
+        <Button
+            android:layout_marginTop="5dp"
+            android:background="@drawable/button_background"
+            android:text="Add"
+            android:fontFamily="sans-serif-condensed-light"
+            android:id="@+id/add_category"
+            android:layout_width="wrap_content"
             android:layout_gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">-->
-
-            <Button
-                android:background="@drawable/button_background"
-                android:text="Add"
-                android:id="@+id/add_select"
-                android:layout_width="wrap_content"
-                android:layout_gravity="center"
-                android:fontFamily="sans-serif-condensed-light"
-                android:gravity="center"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
+            android:gravity="center"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
 
 
-  <!--  </LinearLayout>-->
+    <!--  </LinearLayout>-->
 
 </LinearLayout>

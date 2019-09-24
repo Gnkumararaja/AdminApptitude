@@ -1,47 +1,34 @@
 package com.admin.apptitude;
 
-import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.RecyclerView;
-import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Report extends AppCompatActivity {
-    Spinner sp1, sp2;
-    Button b1;
-    RecyclerView recyclerView;
-    RecyclerView.Adapter recyclerViewAdapter;
-    RecyclerView.LayoutManager recylerViewLayoutManager;
-    Context context;
+public class DeleteCategory extends AppCompatActivity {
+    Spinner sp, sp1;
+    Button delete;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_select_report);
-        getSupportActionBar().setTitle("Reports");
+        setContentView(R.layout.activity_delete_category);
+        getSupportActionBar().setTitle("Delete Category");
         init();
-        b1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(Report.this, "Api functions", Toast.LENGTH_SHORT).show();
-            }
-        });
 
         List<String> category=new ArrayList<String>();
-        category.add("Numeric");
-        category.add("Reasoning");
-        category.add("Logic");
+        category.add("Easy");
+        category.add("Intermediate");
+        category.add("Hard");
 
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<>(this,android.R.layout.simple_spinner_item,category);
         dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        sp1.setAdapter(dataAdapter);
+        sp.setAdapter(dataAdapter);
 
 
         List<String> candidate=new ArrayList<String>();
@@ -51,15 +38,12 @@ public class Report extends AppCompatActivity {
 
         ArrayAdapter<String> dataaAdapter = new ArrayAdapter<>(this,android.R.layout.simple_spinner_item,candidate);
         dataaAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        sp2.setAdapter(dataaAdapter);
-
-
-
+        sp1.setAdapter(dataaAdapter);
     }
 
     private void init() {
-        sp1 = findViewById(R.id.r_select_category);
-        sp2 = findViewById(R.id.r_select_candidate);
-        b1 = findViewById(R.id.r_submit);
+        sp=findViewById(R.id.select_d_type);
+        sp1=findViewById(R.id.select_d_category);
+        delete=findViewById(R.id.delete_category);
     }
 }

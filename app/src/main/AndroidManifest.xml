@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AddQuestions"></activity>
+        <activity android:name=".ViewQuestions"></activity>
+        <activity android:name=".QuestionList" />
+        <activity android:name=".DeleteCategory" />
+        <activity android:name=".SelectAddcategory" />
+        <activity android:name=".AddQuestions" />
         <activity android:name=".SelectAddQuestions" />
         <activity android:name=".Report" />
         <activity android:name=".AddCandidate" />

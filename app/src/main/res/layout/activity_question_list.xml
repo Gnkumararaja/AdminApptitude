@@ -20,13 +20,13 @@
             android:layout_height="wrap_content">
 
             <fr.ganfra.materialspinner.MaterialSpinner
-                android:id="@+id/select_q_type"
-                android:textSize="18sp"
+                android:id="@+id/select_ql_type"
+                android:textSize="18dp"
                 android:padding="5dp"
                 android:textStyle="bold"
-                android:fontFamily="sans-serif-condensed-light"
                 android:layout_marginBottom="20dp"
                 android:layout_gravity="center"
+                android:fontFamily="sans-serif-condensed-light"
                 app:ms_multiline="false"
                 app:ms_arrowColor="#0000ff"
                 app:ms_arrowSize="16dp"
@@ -40,14 +40,14 @@
             android:layout_height="wrap_content">
 
             <fr.ganfra.materialspinner.MaterialSpinner
-                android:id="@+id/select_q_category"
-                android:textSize="18sp"
+                android:id="@+id/select_ql_category"
+                android:textSize="18dp"
                 android:padding="5dp"
                 android:textStyle="bold"
+                android:fontFamily="sans-serif-condensed-light"
                 android:layout_marginBottom="20dp"
                 android:layout_gravity="center"
                 app:ms_multiline="false"
-                android:fontFamily="sans-serif-condensed-light"
                 app:ms_arrowColor="#0000ff"
                 app:ms_arrowSize="16dp"
                 app:ms_hint="Select Category"
@@ -60,14 +60,14 @@
             android:layout_height="wrap_content">
 
             <fr.ganfra.materialspinner.MaterialSpinner
-                android:id="@+id/select_q_subcategory"
-                android:textSize="18sp"
+                android:id="@+id/select_ql_subcategory"
+                android:textSize="18dp"
                 android:textStyle="bold"
                 android:layout_marginBottom="20dp"
                 android:layout_gravity="center"
+                android:fontFamily="sans-serif-condensed-light"
                 app:ms_multiline="false"
                 app:ms_arrowColor="#0000ff"
-                android:fontFamily="sans-serif-condensed-light"
                 android:padding="5dp"
                 app:ms_arrowSize="16dp"
                 app:ms_hint="Select Sub category"
@@ -80,8 +80,8 @@
             android:layout_height="wrap_content">
 
             <fr.ganfra.materialspinner.MaterialSpinner
-                android:id="@+id/select_q_sets"
-                android:textSize="18sp"
+                android:id="@+id/select_ql_sets"
+                android:textSize="18dp"
                 android:textStyle="bold"
                 android:layout_marginBottom="20dp"
                 android:layout_gravity="center"
@@ -95,23 +95,18 @@
                 android:layout_height="match_parent"/>
         </LinearLayout>
 
-      <!--  <LinearLayout
+
+        <Button
+            android:background="@drawable/button_background"
+            android:text="Add"
+            android:id="@+id/add_qlselect"
+            android:layout_width="wrap_content"
             android:layout_gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">-->
-
-            <Button
-                android:background="@drawable/button_background"
-                android:text="Add"
-                android:id="@+id/add_select"
-                android:layout_width="wrap_content"
-                android:layout_gravity="center"
-                android:fontFamily="sans-serif-condensed-light"
-                android:gravity="center"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
+            android:gravity="center"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
 
 
-  <!--  </LinearLayout>-->
+    <!--  </LinearLayout>-->
 
 </LinearLayout>

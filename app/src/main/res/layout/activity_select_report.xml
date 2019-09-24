@@ -7,43 +7,60 @@
     tools:context=".Report">
 
     <LinearLayout
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
-        <Spinner
+        <fr.ganfra.materialspinner.MaterialSpinner
             android:id="@+id/r_select_category"
-            android:layout_width="120dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="20dp"
-            android:text="UserList"
-            android:textSize="25dp" />
-
-        <Spinner
-            android:id="@+id/r_select_candidate"
-            android:layout_marginTop="5dp"
-            android:textSize="25dp"
+            android:textSize="18sp"
+            android:fontFamily="sans-serif-condensed-light"
             android:textStyle="bold"
             android:layout_marginBottom="20dp"
-            android:text="UserList"
             android:layout_gravity="center"
-            android:layout_width="120dp"
+            app:ms_multiline="false"
+            app:ms_arrowColor="#0000ff"
+            app:ms_arrowSize="16dp"
+            app:ms_hint="Select Category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <fr.ganfra.materialspinner.MaterialSpinner
+            android:id="@+id/r_select_candidate"
+            android:textSize="18sp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="center"
+            app:ms_multiline="false"
+            app:ms_arrowColor="#0000ff"
+            app:ms_arrowSize="16dp"
+            app:ms_hint="Select Candidate"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content" />
         <Button
             android:id="@+id/r_submit"
+            android:background="@drawable/button_background"
             android:text="Submit"
-            android:layout_width="match_parent"
+            android:fontFamily="sans-serif-condensed-light"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent" />
     </LinearLayout>
 
     <android.support.v7.widget.RecyclerView
-        android:layout_marginTop="70dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
     </android.support.v7.widget.RecyclerView>
-
+    </LinearLayout>
 </FrameLayout>

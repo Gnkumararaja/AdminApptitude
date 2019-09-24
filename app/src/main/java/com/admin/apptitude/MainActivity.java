@@ -9,11 +9,13 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
     String a="admin",b="password";
     TextInputLayout username,password;
     Button login;
+    ImageView image;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,11 +36,16 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
+
+        /*image.setImageBitmap(new RoundedImage(ProfileActivity.this).transform(bmpp));*/
+
+
     }
 
     private void init() {
     username=findViewById(R.id.uname);
     password=findViewById(R.id.password);
     login=findViewById(R.id.btn_login);
+    image=findViewById(R.id.login_image);
     }
 }

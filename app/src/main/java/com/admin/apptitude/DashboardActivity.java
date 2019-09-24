@@ -43,6 +43,8 @@ public class DashboardActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Log.v("Cardthree","Clicked");
+                Intent i =new Intent(DashboardActivity.this,QuestionList.class);
+                startActivity(i);
             }
         });
 
@@ -58,12 +60,16 @@ public class DashboardActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Log.v("Cardfive","Clicked");
+                Intent i =new Intent(DashboardActivity.this,SelectAddcategory.class);
+                startActivity(i);
             }
         });
         cd5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Log.v("Cardsix","Clicked");
+                Intent i =new Intent(DashboardActivity.this,DeleteCategory.class);
+                startActivity(i);
             }
         });
     }

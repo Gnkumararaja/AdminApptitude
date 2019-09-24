@@ -16,7 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-        <TextView
+       <!-- <TextView
             android:textStyle="bold"
             android:fontFamily="sans-serif-condensed-light"
             android:textSize="28dp"
@@ -30,7 +30,21 @@
             android:fontFamily="sans-serif-condensed-light"
             android:textSize="20dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content" />-->
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputEditText
+                    android:padding="50dp"
+                    android:textSize="20dp"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:layout_width="match_parent"
+                    android:hint="Enter the Question"
+                    android:layout_height="wrap_content" />
+
+            </android.support.design.widget.TextInputLayout>
         </LinearLayout>
 
         <LinearLayout
@@ -48,12 +62,15 @@
                 <TextView
                     android:textSize="18dp"
                     android:text="Option A:"
+                    android:fontFamily="sans-serif-condensed-light"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
 
                 <EditText
-                    android:textSize="20dp"
+                    android:textSize="18dp"
                     android:padding="25dp"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-condensed-light"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
 
@@ -69,13 +86,16 @@
 
                 <TextView
                     android:textSize="18dp"
+                    android:fontFamily="sans-serif-condensed-light"
                     android:text="Option B:"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
 
                 <EditText
-                    android:textSize="20dp"
+                    android:textSize="18dp"
+                    android:fontFamily="sans-serif-condensed-light"
                     android:padding="25dp"
+                    android:textStyle="bold"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
 
@@ -91,12 +111,15 @@
 
                 <TextView
                     android:textSize="18dp"
+                    android:fontFamily="sans-serif-condensed-light"
                     android:text="Option C:"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
 
                 <EditText
-                    android:textSize="20dp"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-condensed-light"
                     android:padding="25dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
@@ -112,13 +135,40 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:textSize="18dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:text="Option D:"
+                    android:textSize="18dp"
+                    android:fontFamily="sans-serif-condensed-light"/>
+
+                <EditText
+                    android:textSize="18dp"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:padding="25dp"
+                    android:textStyle="bold"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
 
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Answer :"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:textSize="18dp" />
+
                 <EditText
-                    android:textSize="20dp"
+                    android:textSize="18dp"
+                    android:fontFamily="sans-serif-condensed-light"
                     android:padding="25dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
@@ -130,6 +180,7 @@
 
 
         <RelativeLayout
+            android:layout_gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -137,8 +188,11 @@
                 android:layout_marginBottom="5dp"
                 android:layout_alignParentBottom="true"
                 android:text="ADD"
+                android:fontFamily="sans-serif-condensed-light"
+                android:background="@drawable/button_background"
+                android:gravity="center"
                 android:id="@+id/btn_add_question"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
         </RelativeLayout>
